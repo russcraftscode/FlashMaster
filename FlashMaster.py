@@ -1,43 +1,87 @@
 import tkinter as tk
 import json
+import os
+import random
 
 root = tk.Tk()
 root.title("FlashMaster")
 root.geometry("600x400")
 
-#load data
-with open("./flashData/linearCh3.json", 'r') as card_data_file:
-    card_data = json.load(card_data_file)
-
-print(card_data)
-
-card_stack = [x for x in card_data]
+all_card_data = []
+card_stack = []
 current_card = 0
+card_set_name = ""
 
 # Build the panels
+card_set_frame = tk.Frame(root)
+card_set_frame.pack(side="left")  # TODO: might need to fill
+shuffle_frame = tk.Frame(root)
+shuffle_frame.pack(side="right")  # TODO: might need to fill
 question_frame = tk.Frame(root)
 question_frame.pack(fill="both", expand=True)  # this grows with window
 
 button_frame = tk.Frame(root)
 button_frame.pack(side="bottom", fill="x")  # stays pinned to bottom, fills width
 
+
+
+
+
 # Text panel
-question_text = tk.Text(question_frame, width=80, height=5)
-answer_text = tk.Text(question_frame, width=80, height=5)
+question_text = tk.Text(question_frame, wrap=tk.WORD, width=80, height=5)
+answer_text = tk.Text(question_frame, wrap=tk.WORD, width=80, height=5)
 
 question_text.pack(fill="both", expand=True, padx=5, pady=5)
 answer_text.pack(fill="both", expand=True, padx=5, pady=5)
 
 
+def print_confidence():  # DEBUG
+    print("#####")
+    for card in card_stack:
+        print(card["question"], card["confidence"])
+
+
+def save_cards(card_filename):
+    global all_card_data
+    with open(f"./flashData/{card_filename}", 'w', encoding="utf-8") as card_data_file:
+        json.dump(all_card_data, card_data_file, indent=4)
+
+
+def load_cards(card_filename):
+
+    global all_card_data
+    global card_stack
+    global current_card
+    global card_set_name
+    card_set_name = card_filename
+    print(f"Loading card set:{card_set_name}")
+    with open(f"./flashData/{card_filename}", 'r', encoding="utf-8") as card_data_file:
+        all_card_data = json.load(card_data_file)
+    #print(all_card_data)  # DEBUG
+    card_stack = []
+    card_stack = [x for x in all_card_data]
+    random.shuffle(card_stack)
+    current_card = 0
+    next_card()
+
+
 def next_card():
     """Shows the next card"""
     global current_card
+    global card_set_name
     current_card += 1
     if current_card >= len(card_stack):
         current_card = 0
     card = card_stack[current_card]
     question_text.delete("1.0", tk.END)  # clear old question
     question_text.insert("0.0", card["question"])  # insert new question
+    question_text.insert("0.0","-------------------------\n")  # line sep
+    question_text.insert("0.0",
+                         f"Confidence with this card: {card['confidence']}\n")
+    question_text.insert("0.0",
+                         f"Current Flashcard Set: {card_set_name[:-5]}\n")
+    answer_text.delete("1.0", tk.END)  # clear old answer
+    #print_confidence()  # DEBUG
 
 
 def show_answer():
@@ -47,12 +91,77 @@ def show_answer():
     answer_text.insert("0.0", card["answer"])  # insert new answer
 
 
+def got_right():
+    """raises card confidence by 1"""
+    global current_card
+    card = card_stack[current_card]
+    if card["confidence"] < 3:
+        card["confidence"] += 1
+    next_card()
+
+
+def got_wrong():
+    """lowers answer confidence by 1 down to a max of -2"""
+    global current_card
+    card = card_stack[current_card]
+    if card["confidence"] > -2:
+        card["confidence"] -= 1
+    next_card()
+
+
+def got_unsure():
+    """Removes mastery, and sets card to slightly unsure"""
+    global current_card
+    card = card_stack[current_card]
+    if card["confidence"] > -1:
+        card["confidence"] = -1
+    next_card()
+
+def clear_conf():
+    global all_card_data
+    for card in all_card_data:
+        card["confidence"] = 0
+    next_card()
+
+def discard_conf():
+    global all_card_data
+    global card_stack
+    global current_card
+    global card_set_name
+    #card_set_name = card_filename
+    print(f"Discarding cards user is confident in")
+
+    card_stack = []
+    for card in all_card_data:
+        if card["confidence"] < 1:
+            card_stack.append(card)
+    random.shuffle(card_stack)
+    current_card = 0
+    next_card()
+
+def on_close():
+    print("saving cards")
+    global card_set_name
+    save_cards(card_set_name)
+    root.destroy()
+
+#card set controls
+for fname in os.listdir("./flashData/"):
+    if fname.endswith(".json"):
+        name = os.path.splitext(fname)[0]
+        btn = tk.Button(
+            card_set_frame,
+            text=name,
+            command=lambda f=fname: load_cards(f)
+        )
+        btn.pack(anchor="w")  # stack vertically, left aligned
+
 # Flashcard controls
 next_button = tk.Button(button_frame, text="Next Card", command=next_card)
 show_button = tk.Button(button_frame, text="Show Answer", command=show_answer)
-right_button = tk.Button(button_frame, text="Got It")
-maybe_button = tk.Button(button_frame, text="Unsure")
-wrong_button = tk.Button(button_frame, text="Wrong")
+right_button = tk.Button(button_frame, text="Got It", command=got_right)
+maybe_button = tk.Button(button_frame, text="Unsure", command=got_unsure)
+wrong_button = tk.Button(button_frame, text="Wrong", command=got_wrong)
 
 next_button.pack(side="top", fill="x")
 show_button.pack(side="top", fill="x")
@@ -60,4 +169,17 @@ right_button.pack(side="left", expand=True, fill="x")
 maybe_button.pack(side="left", expand=True, fill="x")
 wrong_button.pack(side="left", expand=True, fill="x")
 
+# shuffle controls
+discard_button = tk.Button(shuffle_frame, text="Discard Confident", command=discard_conf)
+reload_button = tk.Button(shuffle_frame, text="Reload cards", command=lambda: load_cards(card_set_name))
+clear_button = tk.Button(shuffle_frame, text="Clear confidence", command=clear_conf)
+
+discard_button.pack(fill="x", pady=2)
+reload_button.pack(fill="x", pady=2)
+clear_button.pack(fill="x", pady=2)
+
+card_set_name = "linearCh3.json"
+load_cards(card_set_name)
+
+root.protocol("WM_DELETE_WINDOW", on_close)
 root.mainloop()

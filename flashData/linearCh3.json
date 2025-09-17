@@ -1,97 +1,224 @@
 [
-  { "id": 1,
-    "question": "What two operations must a set be closed under to qualify as a vector space?",
-    "answer": "Vector addition and scalar multiplication.",
-    "score": 0
-  },
-  { "id": 2,
-    "question": "What is an example of a vector space formed by all continuous functions on an interval?",
-    "answer": "C([a, b]), the set of all continuous functions defined on the interval [a, b].",
-    "score": 0
-  },
-  { "id": 3,
-    "question": "What condition must a subset of a vector space meet to be considered a subspace?",
-    "answer": "It must be nonempty and closed under vector addition and scalar multiplication, and contain the zero vector.",
-    "score": 0
-  },
-  { "id": 4,
-    "question": "What does the span of a set of vectors represent?",
-    "answer": "The smallest subspace that contains all linear combinations of those vectors.",
-    "score": 0
-  },
-  { "id": 5,
-    "question": "What is the nullspace of a matrix A?",
-    "answer": "The set of all solutions to Ax = 0, forming a subspace of Rn.",
-    "score": 0
-  },
-  { "id": 6,
-    "question": "How can you test if a vector belongs to the nullspace of a matrix A?",
-    "answer": "Multiply A by the vector. If the result is the zero vector, the vector belongs to the nullspace.",
-    "score": 0
-  },
-  { "id": 7,
-    "question": "When is a set of vectors considered linearly dependent?",
-    "answer": "When a nontrivial linear combination of the vectors equals the zero vector.",
-    "score": 0
-  },
-  { "id": 8,
-    "question": "What shortcut can be used to test independence when you have n vectors in Rn?",
-    "answer": "Check if the determinant of the matrix formed by the vectors is nonzero.",
-    "score": 0
-  },
-  { "id": 9,
-    "question": "What is always true about a set of more than n vectors in a vector space of dimension n?",
-    "answer": "The set is linearly dependent.",
-    "score": 0
-  },
-  { "id": 10,
-    "question": "What two properties must a set of vectors satisfy to form a basis of a vector space?",
-    "answer": "The set must be linearly independent and must span the vector space.",
-    "score": 0
-  },
-  { "id": 11,
-    "question": "What is the dimension of a vector space?",
-    "answer": "The number of vectors in any basis of the vector space.",
-    "score": 0
-  },
-  { "id": 12,
-    "question": "What is a coordinate vector relative to a basis?",
-    "answer": "It is the vector of scalars representing how the original vector is expressed as a linear combination of the basis vectors.",
-    "score": 0
-  },
-  { "id": 13,
-    "question": "What is a transition matrix in change of basis?",
-    "answer": "A matrix that converts coordinate vectors from one basis to another.",
-    "score": 0
-  },
-  { "id": 14,
-    "question": "What is the row space of a matrix?",
-    "answer": "The subspace spanned by the row vectors of the matrix.",
-    "score": 0
-  },
-  { "id": 15,
-    "question": "What is the column space of a matrix?",
-    "answer": "The subspace spanned by the column vectors of the matrix.",
-    "score": 0
-  },
-  { "id": 16,
-    "question": "When is the system Ax = b consistent?",
-    "answer": "When b lies in the column space of A.",
-    "score": 0
-  },
-  { "id": 17,
-    "question": "What is the rank of a matrix?",
-    "answer": "The dimension of its row space or equivalently its column space.",
-    "score": 0
-  },
-  { "id": 18,
-    "question": "What does the Rank-Nullity Theorem state?",
-    "answer": "The nullity of a matrix plus its rank equals the number of columns of the matrix.",
-    "score": 0
-  },
-  { "id": 19,
-    "question": "When is an n×n matrix invertible?",
-    "answer": "If and only if its rank equals n.",
-    "score": 0
-  }
+    {
+        "id": 1,
+        "question": "What two operations must a set be closed under to qualify as a vector space?",
+        "answer": "Vector addition and scalar multiplication.",
+        "confidence": 0
+    },
+    {
+        "id": 2,
+        "question": "When is an nxn matrix invertible?",
+        "answer": "If and only if its rank equals n.",
+        "confidence": 0
+    },
+    {
+        "id": 3,
+        "question": "What condition must a subset of a vector space meet to be considered a subspace?",
+        "answer": "It must be nonempty and closed under vector addition and scalar multiplication, and contain the zero vector.",
+        "confidence": 0
+    },
+    {
+        "id": 4,
+        "question": "What does the span of a set of vectors represent?",
+        "answer": "The smallest subspace that contains all linear combinations of those vectors.",
+        "confidence": 0
+    },
+    {
+        "id": 5,
+        "question": "What is the nullspace of a matrix A?",
+        "answer": "The set of all solutions to Ax = 0, forming a subspace of the domain of A.",
+        "confidence": 0
+    },
+    {
+        "id": 6,
+        "question": "How can you test if a vector belongs to the nullspace of a matrix A?",
+        "answer": "Multiply A by the vector. If the result is the zero vector, the vector belongs to the nullspace.",
+        "confidence": 0
+    },
+    {
+        "id": 7,
+        "question": "When is a set of vectors considered linearly dependent?",
+        "answer": "When a nontrivial linear combination of the vectors equals the zero vector.",
+        "confidence": 0
+    },
+    {
+        "id": 8,
+        "question": "What shortcut can be used to test independence when you have n vectors in Rn?",
+        "answer": "Check if the determinant of the matrix formed by the vectors is nonzero.",
+        "confidence": 0
+    },
+    {
+        "id": 9,
+        "question": "What is always true about a set of more than n vectors in a vector space of dimension n?",
+        "answer": "The set is linearly dependent.",
+        "confidence": 0
+    },
+    {
+        "id": 10,
+        "question": "What two properties must a set of vectors satisfy to form a basis of a vector space?",
+        "answer": "The set must be linearly independent and must span the vector space.",
+        "confidence": 0
+    },
+    {
+        "id": 11,
+        "question": "What is the dimension of a vector space?",
+        "answer": "The number of vectors in any basis of the vector space.",
+        "confidence": 0
+    },
+    {
+        "id": 12,
+        "question": "What is a coordinate vector relative to a basis?",
+        "answer": "It is the vector of scalars representing how the original vector is expressed as a linear combination of the basis vectors.",
+        "confidence": 0
+    },
+    {
+        "id": 13,
+        "question": "What is a transition matrix in change of basis?",
+        "answer": "A matrix that converts coordinate vectors from one basis to another.",
+        "confidence": 0
+    },
+    {
+        "id": 14,
+        "question": "What is the row space of a matrix?",
+        "answer": "The subspace spanned by the row vectors of the matrix.",
+        "confidence": 0
+    },
+    {
+        "id": 15,
+        "question": "What is the column space of a matrix?",
+        "answer": "The subspace spanned by the column vectors of the matrix.",
+        "confidence": 0
+    },
+    {
+        "id": 16,
+        "question": "When is the system Ax = b consistent?",
+        "answer": "When b lies in the column space of A.",
+        "confidence": 0
+    },
+    {
+        "id": 17,
+        "question": "What is the rank of a matrix?",
+        "answer": "The dimension of its row space or equivalently its column space.",
+        "confidence": 0
+    },
+    {
+        "id": 18,
+        "question": "What does the Rank-Nullity Theorem state?",
+        "answer": "The nullity of a matrix plus its rank equals the number of columns of the matrix.",
+        "confidence": 0
+    },
+    {
+        "id": 20,
+        "question": "What is the geometric interpretation of linear dependence in R2 or R3?",
+        "answer": "In R2, dependent vectors are collinear; in R3, they may be coplanar.",
+        "confidence": 0
+    },
+    {
+        "id": 21,
+        "question": "What is true about any single nonzero vector in a vector space regarding independence?",
+        "answer": "It is linearly independent by itself.",
+        "confidence": 0
+    },
+    {
+        "id": 22,
+        "question": "What three statements are equivalent for n vectors in Rn?",
+        "answer": "The vectors are linearly independent, they span Rn, and the matrix with them as columns is nonsingular.",
+        "confidence": 0
+    },
+    {
+        "id": 23,
+        "question": "How can polynomials be tested for linear dependence?",
+        "answer": "By applying the same definition of linear dependence, treating them as elements of a vector space.",
+        "confidence": 0
+    },
+    {
+        "id": 24,
+        "question": "What does it mean that a basis is the 'minimal spanning set'?",
+        "answer": "It means no vector in the set can be removed without losing the ability to span the space.",
+        "confidence": 0
+    },
+    {
+        "id": 25,
+        "question": "Why do all bases of a vector space have the same number of vectors?",
+        "answer": "Because that number defines the dimension of the vector space.",
+        "confidence": 0
+    },
+    {
+        "id": 26,
+        "question": "If dim(V) = n, what is true about any set of n linearly independent vectors in V?",
+        "answer": "They form a basis of V.",
+        "confidence": 0
+    },
+    {
+        "id": 27,
+        "question": "What is meant by the 'degrees of freedom' in relation to dimension?",
+        "answer": "The dimension indicates how many independent directions exist in the space, corresponding to degrees of freedom.",
+        "confidence": 0
+    },
+    {
+        "id": 28,
+        "question": "What is the coordinate vector of x relative to a basis V?",
+        "answer": "The vector of coefficients that expresses x as a linear combination of the basis vectors in V.",
+        "confidence": 0
+    },
+    {
+        "id": 29,
+        "question": "What is the transition matrix from basis V to basis U?",
+        "answer": "It is U\u207b\u00b9V, which converts coordinate vectors from basis V to basis U.",
+        "confidence": 0
+    },
+    {
+        "id": 30,
+        "question": "How do you find a basis for the row space of a matrix?",
+        "answer": "Reduce the matrix to echelon form and take the nonzero rows.",
+        "confidence": 0
+    },
+    {
+        "id": 31,
+        "question": "How do you find a basis for the column space of a matrix?",
+        "answer": "Reduce the matrix to echelon form and take the original columns corresponding to the pivot columns.",
+        "confidence": 0
+    },
+    {
+        "id": 32,
+        "question": "What is the relationship between the rank and nullity of a matrix?",
+        "answer": "Rank plus nullity equals the number of columns of the matrix.",
+        "confidence": 0
+    },
+    {
+        "id": 33,
+        "question": "What is the difference between row space and column space?",
+        "answer": "Row space is spanned by the rows of a matrix, while column space is spanned by the columns.",
+        "confidence": 0
+    },
+    {
+        "id": 34,
+        "question": "What does it mean if b is not in the column space of A?",
+        "answer": "The system Ax = b has no solution.",
+        "confidence": 0
+    },
+    {
+        "id": 35,
+        "question": "What is the significance of pivot columns in reduced echelon form?",
+        "answer": "They indicate which columns of the original matrix form a basis for the column space.",
+        "confidence": 0
+    },
+    {
+        "id": 36,
+        "question": "How does reducing a spanning set to a basis work?",
+        "answer": "By removing vectors that are linear combinations of earlier vectors in the set.",
+        "confidence": 0
+    },
+    {
+        "id": 37,
+        "question": "What does it mean if the determinant of a square matrix is zero?",
+        "answer": "Its columns are linearly dependent, and the matrix is singular.",
+        "confidence": 0
+    },
+    {
+        "id": 38,
+        "question": "What does it mean if the determinant of a square matrix is nonzero?",
+        "answer": "Its columns are linearly independent, and the matrix is invertible.",
+        "confidence": 0
+    }
 ]
