@@ -1,2 +1,2 @@
 # FlashMaster
-SImple flashcard program
+Simple flashcard program
