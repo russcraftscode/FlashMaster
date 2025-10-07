@@ -1,0 +1,290 @@
+[
+    {
+        "id": 1,
+        "question": "What is the geometrical meaning of a linear system in two unknowns?",
+        "answer": "It represents the intersection of lines.",
+        "confidence": 0
+    },
+    {
+        "id": 2,
+        "question": "What is the geometrical meaning of a linear system in three unknowns?",
+        "answer": "It represents the intersection of planes.",
+        "confidence": 0
+    },
+    {
+        "id": 3,
+        "question": "What are the three types of elementary row operations?",
+        "answer": "1) Interchange two rows, 2) Multiply a row by a nonzero constant, 3) Add a multiple of one row to another.",
+        "confidence": 0
+    },
+    {
+        "id": 4,
+        "question": "What is Row Echelon Form (REF)?",
+        "answer": "A form of a matrix where each leading entry of a row is to the right of the leading entry of the row above it, and all entries below a leading entry are zero.",
+        "confidence": 0
+    },
+    {
+        "id": 5,
+        "question": "What is Reduced Row Echelon Form (RREF)?",
+        "answer": "A matrix in REF where each leading entry is 1 and is the only nonzero entry in its column.",
+        "confidence": 0
+    },
+    {
+        "id": 6,
+        "question": "How do you solve a system using REF?",
+        "answer": "Use back substitution after obtaining REF.",
+        "confidence": 0
+    },
+    {
+        "id": 7,
+        "question": "How do you solve a system using RREF?",
+        "answer": "Use the final RREF to directly read off the solution.",
+        "confidence": 0
+    },
+    {
+        "id": 8,
+        "question": "Define an over-determined system.",
+        "answer": "A system with more equations than unknowns.",
+        "confidence": 0
+    },
+    {
+        "id": 9,
+        "question": "Define an under-determined system.",
+        "answer": "A system with more unknowns than equations.",
+        "confidence": 0
+    },
+    {
+        "id": 10,
+        "question": "Define a consistent system.",
+        "answer": "A system that has at least one solution.",
+        "confidence": 0
+    },
+    {
+        "id": 11,
+        "question": "Define an inconsistent system.",
+        "answer": "A system with no solution.",
+        "confidence": 0
+    },
+    {
+        "id": 12,
+        "question": "When a system has infinitely many solutions, what should you identify?",
+        "answer": "The lead (pivot) and free variables, then express the solution in terms of parameters.",
+        "confidence": 0
+    },
+    {
+        "id": 13,
+        "question": "What is matrix-vector multiplication?",
+        "answer": "It is a linear combination of the columns of the matrix A.",
+        "confidence": 0
+    },
+    {
+        "id": 14,
+        "question": "What is the Consistency Theorem?",
+        "answer": "It states that a linear system Ax = b is consistent if and only if b is a linear combination of the columns of A.",
+        "confidence": 0
+    },
+    {
+        "id": 15,
+        "question": "What is matrix-matrix multiplication?",
+        "answer": "Each column of the product AB is a linear combination of the columns of A using coefficients from the corresponding column of B.",
+        "confidence": 0
+    },
+    {
+        "id": 16,
+        "question": "Does matrix multiplication commute?",
+        "answer": "No, in general AB \u2260 BA.",
+        "confidence": 0
+    },
+    {
+        "id": 17,
+        "question": "Does matrix multiplication associate?",
+        "answer": "Yes, (AB)C = A(BC).",
+        "confidence": 0
+    },
+    {
+        "id": 18,
+        "question": "Define a linear combination.",
+        "answer": "A sum of scalar multiples of vectors.",
+        "confidence": 0
+    },
+    {
+        "id": 19,
+        "question": "Define the transpose of a matrix.",
+        "answer": "The matrix obtained by swapping rows and columns.",
+        "confidence": 0
+    },
+    {
+        "id": 20,
+        "question": "Define a symmetric matrix.",
+        "answer": "A matrix that is equal to its transpose.",
+        "confidence": 0
+    },
+    {
+        "id": 21,
+        "question": "What are the rules of matrix algebra?",
+        "answer": "Standard algebraic properties such as associativity, distributivity, and identity behavior with respect to matrix addition and multiplication.",
+        "confidence": 0
+    },
+    {
+        "id": 22,
+        "question": "Define the identity matrix.",
+        "answer": "A square matrix with 1s on the diagonal and 0s elsewhere.",
+        "confidence": 0
+    },
+    {
+        "id": 23,
+        "question": "Define the inverse of a matrix.",
+        "answer": "A matrix A\u207b\u00b9 such that AA\u207b\u00b9 = A\u207b\u00b9A = I.",
+        "confidence": 0
+    },
+    {
+        "id": 24,
+        "question": "Define a singular matrix.",
+        "answer": "A matrix that does not have an inverse.",
+        "confidence": 0
+    },
+    {
+        "id": 25,
+        "question": "What are the algebraic rules of the transpose?",
+        "answer": "(A + B)\u1d40 = A\u1d40 + B\u1d40 and (AB)\u1d40 = B\u1d40A\u1d40.",
+        "confidence": 0
+    },
+    {
+        "id": 26,
+        "question": "What is the property of the inverse of a product?",
+        "answer": "If A and B are invertible, then (AB)\u207b\u00b9 = B\u207b\u00b9A\u207b\u00b9.",
+        "confidence": 0
+    },
+    {
+        "id": 27,
+        "question": "What is an elementary matrix?",
+        "answer": "A matrix obtained by performing a single elementary row operation on the identity matrix.",
+        "confidence": 0
+    },
+    {
+        "id": 28,
+        "question": "How do you find the inverse of an elementary matrix?",
+        "answer": "Perform the inverse of the original row operation.",
+        "confidence": 0
+    },
+    {
+        "id": 29,
+        "question": "Define Row Equivalence.",
+        "answer": "Two matrices are row equivalent if one can be obtained from the other by a sequence of elementary row operations.",
+        "confidence": 0
+    },
+    {
+        "id": 30,
+        "question": "What are the equivalent conditions for nonsingularity?",
+        "answer": "A matrix is invertible, row equivalent to I, has full rank, and det(A) \u2260 0.",
+        "confidence": 0
+    },
+    {
+        "id": 31,
+        "question": "How do you compute the inverse of a matrix using the augmented matrix [A|I]?",
+        "answer": "Perform row operations to transform [A|I] into [I|A\u207b\u00b9].",
+        "confidence": 0
+    },
+    {
+        "id": 32,
+        "question": "How can you use the inverse to solve Ax = b?",
+        "answer": "Compute x = A\u207b\u00b9b.",
+        "confidence": 0
+    },
+    {
+        "id": 33,
+        "question": "What is LU factorization?",
+        "answer": "The decomposition of a matrix A into a lower triangular matrix L and an upper triangular matrix U.",
+        "confidence": 0
+    },
+    {
+        "id": 34,
+        "question": "How is LU factorization used to solve Ax = b?",
+        "answer": "First solve Ly = b, then solve Ux = y using substitution.",
+        "confidence": 0
+    },
+    {
+        "id": 35,
+        "question": "Define minors and cofactors.",
+        "answer": "A minor is the determinant of a submatrix; a cofactor is (-1)^(i+j) times the minor of element a\u1d62\u2c7c.",
+        "confidence": 0
+    },
+    {
+        "id": 36,
+        "question": "How do you compute a determinant using cofactor expansion?",
+        "answer": "Expand along any row or column using cofactors.",
+        "confidence": 0
+    },
+    {
+        "id": 37,
+        "question": "What is det(A\u1d40)?",
+        "answer": "det(A\u1d40) = det(A).",
+        "confidence": 0
+    },
+    {
+        "id": 38,
+        "question": "What is the determinant of a triangular matrix?",
+        "answer": "It equals the product of its diagonal entries.",
+        "confidence": 0
+    },
+    {
+        "id": 39,
+        "question": "If a matrix has a row or column of all zeros, what is its determinant?",
+        "answer": "Zero.",
+        "confidence": 0
+    },
+    {
+        "id": 40,
+        "question": "If a matrix has two identical rows or columns, what is its determinant?",
+        "answer": "Zero.",
+        "confidence": 0
+    },
+    {
+        "id": 41,
+        "question": "When is a square matrix singular in terms of determinant?",
+        "answer": "If and only if det(A) = 0.",
+        "confidence": 0
+    },
+    {
+        "id": 42,
+        "question": "What happens to the determinant if two rows are interchanged?",
+        "answer": "The determinant changes sign.",
+        "confidence": 0
+    },
+    {
+        "id": 43,
+        "question": "What happens if one row is multiplied by a constant \u03b1?",
+        "answer": "The determinant is multiplied by \u03b1.",
+        "confidence": 0
+    },
+    {
+        "id": 44,
+        "question": "What happens if a multiple of one row is added to another?",
+        "answer": "The determinant remains unchanged.",
+        "confidence": 0
+    },
+    {
+        "id": 45,
+        "question": "What is the determinant if one row is a multiple of another?",
+        "answer": "Zero.",
+        "confidence": 0
+    },
+    {
+        "id": 46,
+        "question": "What is the determinant if one row is a linear combination of others?",
+        "answer": "Zero.",
+        "confidence": 0
+    },
+    {
+        "id": 47,
+        "question": "What is the determinant of a product of two matrices?",
+        "answer": "det(AB) = det(A)det(B).",
+        "confidence": 0
+    },
+    {
+        "id": 48,
+        "question": "What is det(A\u207b\u00b9)?",
+        "answer": "det(A\u207b\u00b9) = 1/det(A).",
+        "confidence": 0
+    }
+]

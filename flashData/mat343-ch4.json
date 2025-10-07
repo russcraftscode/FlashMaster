@@ -1,0 +1,14 @@
+[
+  {"id": 1, "question": "When is a transformation L: V → W linear?", "answer": "L is linear if (i) L(x + y) = L(x) + L(y) for all x, y ∈ V, and (ii) L(αx) = αL(x) for all scalars α and vectors x ∈ V.", "confidence": 0},
+  {"id": 2, "question": "What does a linear transformation do to the zero vector?", "answer": "A linear transformation maps the zero vector in V to the zero vector in W.", "confidence": 0},
+  {"id": 3, "question": "What is the kernel of a linear transformation L: W → V?", "answer": "ker(L) is the set of all vectors v ∈ V such that L(v) = 0.", "confidence": 0},
+  {"id": 4, "question": "What is the image of a subspace S under a linear transformation L?", "answer": "The set of all vectors w ∈ W such that w = L(v) for some v ∈ S.", "confidence": 0},
+  {"id": 5, "question": "What is the range of a linear transformation L?", "answer": "The image of the entire space V under L.", "confidence": 0},
+  {"id": 6, "question": "What does Theorem 4.2.1 state about linear transformations?", "answer": "If L: R^n → R^m is linear, there exists an m×n matrix A such that L(x) = Ax for all x ∈ R^n.", "confidence": 0},
+  {"id": 7, "question": "How is the matrix A in L(x) = Ax constructed?", "answer": "The jth column of A is L(e_j), where e_j is the jth standard basis vector in R^n.", "confidence": 0},
+  {"id": 8, "question": "What is the relationship between ker(L) and the matrix A in L(x) = Ax?", "answer": "ker(L) = N(A), the nullspace of A.", "confidence": 0},
+  {"id": 9, "question": "What is the relationship between Range(L) and matrix A in L(x) = Ax?", "answer": "Range(L) = R(A), the column space of A.", "confidence": 0},
+  {"id": 10, "question": "What is the rotation matrix that rotates a vector in R² counterclockwise by an angle θ?", "answer": "Q = [[cosθ, −sinθ], [sinθ, cosθ]].", "confidence": 0},
+  {"id": 11, "question": "What is the rotation matrix that rotates a vector in R² clockwise by an angle θ?", "answer": "Q⁻¹ = Qᵀ = [[cosθ, sinθ], [−sinθ, cosθ]].", "confidence": 0},
+  {"id": 12, "question": "How do you find matrix representations of combinations of transformations?", "answer": "Multiply the matrices in the order the transformations are applied. For example, if rotation is followed by reflection, the combined matrix is RQ.", "confidence": 0}
+]
