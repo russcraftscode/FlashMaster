@@ -275,7 +275,7 @@ for name in flash_files:
     btn = tk.Button(
         card_set_frame,
         text=name,
-        command=lambda f=fname: load_cards(f)
+        command=lambda f= name + ".json": load_cards(f)
     )
     btn.pack(anchor="w")  # stack vertically, left aligned
 
