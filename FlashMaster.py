@@ -109,7 +109,7 @@ def draw_number_cards(number_to_draw):
         number_to_draw = left_in_deck
 
     # make a list with all the card ID's in it twice over
-    all_card_ids = [card["id"] for card in all_card_data ]
+    all_card_ids = [card["id"] for card in all_card_data]
     # print(all_card_ids) # DEBUG
     all_card_ids.sort()
     # print(all_card_ids) # DEBUG
@@ -122,15 +122,16 @@ def draw_number_cards(number_to_draw):
 
     # grab the next x cards who ID's are in the id list
     id_index = 0
-    while(all_card_ids[id_index] != highest_id_in_stack): # seek to the id in the list
-        id_index+=1
+    while (all_card_ids[id_index] != highest_id_in_stack):  # seek to the id in the list
+        id_index += 1
     for index_offset in range(number_to_draw):
-        id_to_add = all_card_ids[index_offset+1]
+        id_to_add = all_card_ids[index_offset + 1]
         for card in all_card_data:
             if card["id"] == id_to_add:
                 card_stack.append(card)
     update_confidence()
     display_question()
+
 
 def draw_only_cards(number_to_draw):
     global all_card_data
@@ -270,12 +271,12 @@ for fname in os.listdir("./flashData/"):
     if fname.endswith(".json"):
         name = os.path.splitext(fname)[0]
         flash_files.append(name)
-flash_files.sort() # put the files in aphabetical order to look neater
+flash_files.sort()  # put the files in aphabetical order to look neater
 for name in flash_files:
     btn = tk.Button(
         card_set_frame,
         text=name,
-        command=lambda f= name + ".json": load_cards(f)
+        command=lambda f=name + ".json": load_cards(f)
     )
     btn.pack(anchor="w")  # stack vertically, left aligned
 
@@ -311,11 +312,14 @@ clear_button = tk.Button(shuffle_frame, text="Clear confidence", command=clear_c
 def validate_digits(new_value):  #lets user enter digits only
     return new_value == "" or new_value.isdigit()
 
+
 vcmd = (root.register(validate_digits), "%P")
 num_to_draw = tk.IntVar(value=10)
 draw_number_entry = tk.Entry(shuffle_frame, textvariable=num_to_draw, validate="key", validatecommand=vcmd)
-draw_add_number_button = tk.Button(shuffle_frame, text="Draw x Additional Cards", command=lambda: draw_number_cards(num_to_draw.get()))
-draw_only_number_button = tk.Button(shuffle_frame, text="Discard & Draw x Cards", command=lambda: draw_only_cards(num_to_draw.get()))
+draw_add_number_button = tk.Button(shuffle_frame, text="Draw x Additional Cards",
+                                   command=lambda: draw_number_cards(num_to_draw.get()))
+draw_only_number_button = tk.Button(shuffle_frame, text="Discard & Draw x Cards",
+                                    command=lambda: draw_only_cards(num_to_draw.get()))
 
 active_card_frame.pack(fill="x", pady=2)
 discard_button.pack(fill="x", pady=2)
@@ -325,7 +329,7 @@ draw_number_entry.pack()
 draw_add_number_button.pack()
 draw_only_number_button.pack()
 
-card_set_name = "mat343-ch1,ch2.json" # TODO: handle the default card set in a safer way
+card_set_name = "ift360-mod2.json"  # TODO: handle the default card set in a safer way
 load_cards(card_set_name)
 
 root.protocol("WM_DELETE_WINDOW", on_close)

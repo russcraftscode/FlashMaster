@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "question": "What are the four main categories of AI definitions?",
+    "answer": "The four categories are: systems that think like humans, systems that act like humans, systems that think rationally, and systems that act rationally.",
+    "confidence": 0
+  },
+  {
+    "id": 2,
+    "question": "What does it mean for an AI system to 'think like humans'?",
+    "answer": "It focuses on understanding how humans think, borrowing from neuroscience and cognitive science to replicate human thought processes.",
+    "confidence": 0
+  },
+  {
+    "id": 3,
+    "question": "What does it mean for an AI system to 'act like humans'?",
+    "answer": "It focuses on replicating human behavior using psychology and can be evaluated using the Turing Test to see if the system’s actions are indistinguishable from a human’s.",
+    "confidence": 0
+  },
+  {
+    "id": 4,
+    "question": "What does it mean for an AI system to 'think rationally'?",
+    "answer": "It means the AI uses formal logic and inference rules to reach correct conclusions from valid premises, focusing on reasoning rather than mimicry.",
+    "confidence": 0
+  },
+  {
+    "id": 5,
+    "question": "What does it mean for an AI system to 'act rationally'?",
+    "answer": "It means the AI acts to achieve the best possible outcome toward a defined goal, emphasizing measurable, goal-oriented behavior.",
+    "confidence": 0
+  },
+  {
+    "id": 6,
+    "question": "Who proposed the Turing Test and what does it evaluate?",
+    "answer": "Alan Turing proposed the Turing Test to determine whether a machine can act like a human by testing if a human interrogator can distinguish it from a real person.",
+    "confidence": 0
+  },
+  {
+    "id": 7,
+    "question": "What example demonstrates logical reasoning in AI?",
+    "answer": "The Socrates syllogism: 'Socrates is a man; all men are mortal; therefore, Socrates is mortal.' It illustrates inference from premises.",
+    "confidence": 0
+  },
+  {
+    "id": 8,
+    "question": "What is rational behavior in AI defined by?",
+    "answer": "It is defined in terms of achieving a goal and obtaining the best possible outcome given the available information and environment.",
+    "confidence": 0
+  },
+  {
+    "id": 9,
+    "question": "Which disciplines contribute knowledge to AI development?",
+    "answer": "Neuroscience, psychology, logic, economics, mathematics, computer engineering, linguistics, and control theory.",
+    "confidence": 0
+  },
+  {
+    "id": 10,
+    "question": "Why does AI borrow from linguistics?",
+    "answer": "To enable AI systems to process and represent natural language input, allowing human-like communication and understanding.",
+    "confidence": 0
+  },
+  {
+    "id": 11,
+    "question": "Why is uncertainty important in AI?",
+    "answer": "Because AI systems often lack full knowledge of their environment and must reason and act effectively under uncertainty.",
+    "confidence": 0
+  },
+  {
+    "id": 12,
+    "question": "What is meant by 'perception' in AI?",
+    "answer": "It refers to processing inputs from the environment, such as through sensors or computer vision—not true human understanding, but data interpretation.",
+    "confidence": 0
+  },
+  {
+    "id": 13,
+    "question": "What is an agent in AI?",
+    "answer": "An entity that exists in an environment, perceives it through sensors, processes those perceptions, and acts upon it using actuators.",
+    "confidence": 0
+  },
+  {
+    "id": 14,
+    "question": "What are sensors and actuators in AI agents?",
+    "answer": "Sensors gather information from the environment (e.g., cameras, microphones), and actuators perform actions that affect the environment (e.g., motors, arms).",
+    "confidence": 0
+  },
+  {
+    "id": 15,
+    "question": "What is a percept sequence?",
+    "answer": "It is the complete history of everything an agent has perceived from its environment over time.",
+    "confidence": 0
+  },
+  {
+    "id": 16,
+    "question": "What is an agent function?",
+    "answer": "An agent function is a mathematical mapping from a percept sequence to an action that defines the agent’s behavior.",
+    "confidence": 0
+  },
+  {
+    "id": 17,
+    "question": "What is a rational agent?",
+    "answer": "A rational agent selects actions expected to maximize its performance measure based on its percepts, knowledge, and environment.",
+    "confidence": 0
+  },
+  {
+    "id": 18,
+    "question": "What four factors determine an agent’s rationality?",
+    "answer": "Performance measure, percept sequence, prior knowledge, and available actions.",
+    "confidence": 0
+  },
+  {
+    "id": 19,
+    "question": "What defines a task environment?",
+    "answer": "A task environment consists of the performance measure, the environment itself, actuators, and sensors.",
+    "confidence": 0
+  },
+  {
+    "id": 20,
+    "question": "What is an example of a simple task environment?",
+    "answer": "A vacuum cleaner operating in two rooms (A and B), where each can be clean or dirty, and the agent can move left, move right, or suck dirt.",
+    "confidence": 0
+  },
+  {
+    "id": 21,
+    "question": "What is an example of a complex task environment?",
+    "answer": "An autonomous taxi driver navigating roads with traffic, pedestrians, weather, and laws to follow.",
+    "confidence": 0
+  },
+  {
+    "id": 22,
+    "question": "What is a performance measure in AI?",
+    "answer": "A mathematical function that evaluates how successful an agent’s actions are in achieving its goal.",
+    "confidence": 0
+  },
+  {
+    "id": 23,
+    "question": "What does it mean for an environment to be fully observable?",
+    "answer": "All relevant aspects of the environment are known to the agent at all times, allowing complete decision-making information.",
+    "confidence": 0
+  },
+  {
+    "id": 24,
+    "question": "What does it mean for an environment to be partially observable?",
+    "answer": "The agent has limited or incomplete information about the environment at any given time.",
+    "confidence": 0
+  },
+  {
+    "id": 25,
+    "question": "What is a deterministic environment?",
+    "answer": "One in which the next state depends entirely on the current state and the agent’s action, without randomness.",
+    "confidence": 0
+  },
+  {
+    "id": 26,
+    "question": "What is a stochastic environment?",
+    "answer": "An environment where outcomes depend on both the agent’s actions and external, unpredictable factors.",
+    "confidence": 0
+  },
+  {
+    "id": 27,
+    "question": "What is an episodic environment?",
+    "answer": "Each action and perception is independent of previous ones; for example, a ping-pong-playing agent focuses only on the current serve.",
+    "confidence": 0
+  },
+  {
+    "id": 28,
+    "question": "What is a sequential environment?",
+    "answer": "Actions influence future situations; for example, each driving decision affects subsequent ones in an autonomous taxi.",
+    "confidence": 0
+  },
+  {
+    "id": 29,
+    "question": "What is a discrete environment?",
+    "answer": "One where percepts, actions, and states take on distinct, countable values, such as a chess game.",
+    "confidence": 0
+  },
+  {
+    "id": 30,
+    "question": "What is a continuous environment?",
+    "answer": "An environment with a range of continuous values, such as driving where speed and steering angles vary smoothly.",
+    "confidence": 0
+  },
+  {
+    "id": 31,
+    "question": "What is a single-agent environment?",
+    "answer": "An environment where only one agent operates without other agents affecting outcomes.",
+    "confidence": 0
+  },
+  {
+    "id": 32,
+    "question": "What is a multi-agent environment?",
+    "answer": "An environment involving multiple agents that may cooperate or compete with each other.",
+    "confidence": 0
+  },
+  {
+    "id": 33,
+    "question": "What are the two main components of an AI agent?",
+    "answer": "Architecture (hardware, sensors, actuators, CPU) and program (software that maps percepts to actions).",
+    "confidence": 0
+  },
+  {
+    "id": 34,
+    "question": "What is a reflex agent?",
+    "answer": "A simple agent that selects actions directly based on current percepts using predefined rules or tables.",
+    "confidence": 0
+  },
+  {
+    "id": 35,
+    "question": "What is a model-based agent?",
+    "answer": "An agent that builds an internal model of the world to predict outcomes and make informed decisions.",
+    "confidence": 0
+  },
+  {
+    "id": 36,
+    "question": "What is a goal-based agent?",
+    "answer": "An agent that chooses actions based on which options move it closer to a defined goal.",
+    "confidence": 0
+  },
+  {
+    "id": 37,
+    "question": "What is a utility-based agent?",
+    "answer": "An agent that uses a utility function to evaluate and choose actions that maximize overall satisfaction or success.",
+    "confidence": 0
+  },
+  {
+    "id": 38,
+    "question": "What is a learning agent?",
+    "answer": "An agent that improves its performance through experience by learning from feedback on past actions.",
+    "confidence": 0
+  },
+  {
+    "id": 39,
+    "question": "Why is the task environment critical for agent performance?",
+    "answer": "Because the environment’s properties determine how actions translate into outcomes and how rationality is evaluated.",
+    "confidence": 0
+  },
+  {
+    "id": 40,
+    "question": "What is the key difference between AI rationality and human morality?",
+    "answer": "AI rationality is defined by measurable performance toward goals, while human morality involves philosophical and ethical judgment.",
+    "confidence": 0
+  }
+]
