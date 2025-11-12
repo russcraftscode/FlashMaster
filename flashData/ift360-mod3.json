@@ -1,0 +1,332 @@
+[
+  {
+    "id": 1,
+    "question": "What is an uninformed search method?",
+    "answer": "A method that has no knowledge of how close each state is to the goal state and explores the search space without domain-specific guidance.",
+    "confidence": 0
+  },
+  {
+    "id": 2,
+    "question": "Which algorithms are examples of uninformed search methods?",
+    "answer": "Breadth-first search, Dijkstra's (Uniform Cost) search, Depth-first search, Depth-limited search, and Iterative deepening search.",
+    "confidence": 0
+  },
+  {
+    "id": 3,
+    "question": "Why is breadth-first search cost-optimal only when all actions have equal cost?",
+    "answer": "Because it expands nodes level by level, guaranteeing the shortest path in number of steps only when all transitions have equal cost.",
+    "confidence": 0
+  },
+  {
+    "id": 4,
+    "question": "What is the main limitation of breadth-first search?",
+    "answer": "It has very high memory and time complexity since it must store and process all nodes at each level before moving deeper.",
+    "confidence": 0
+  },
+  {
+    "id": 5,
+    "question": "How does Dijkstra's (Uniform Cost) search improve over breadth-first search?",
+    "answer": "It expands the lowest-cost path first, accounting for varying edge costs, and guarantees finding the minimum-cost solution.",
+    "confidence": 0
+  },
+  {
+    "id": 6,
+    "question": "What problem does depth-first search solve compared to breadth-first search?",
+    "answer": "It uses far less memory because it only stores one path at a time instead of the entire tree of nodes.",
+    "confidence": 0
+  },
+  {
+    "id": 7,
+    "question": "Why is depth-first search not guaranteed to find the lowest-cost solution?",
+    "answer": "It stops at the first goal it finds, which may not be the cheapest or optimal path.",
+    "confidence": 0
+  },
+  {
+    "id": 8,
+    "question": "What is depth-limited search designed to prevent?",
+    "answer": "It prevents infinite loops in depth-first search by setting a maximum search depth cutoff.",
+    "confidence": 0
+  },
+  {
+    "id": 9,
+    "question": "How does iterative deepening search work?",
+    "answer": "It repeatedly runs depth-limited search with increasing depth limits until a goal is found.",
+    "confidence": 0
+  },
+  {
+    "id": 10,
+    "question": "What distinguishes informed search methods from uninformed ones?",
+    "answer": "Informed search uses domain knowledge, often expressed as heuristics, to estimate how close each state is to the goal.",
+    "confidence": 0
+  },
+  {
+    "id": 11,
+    "question": "What is a heuristic function in informed search?",
+    "answer": "A mathematical estimate (H(n)) that represents the approximate cost or distance from a node to the goal state.",
+    "confidence": 0
+  },
+  {
+    "id": 12,
+    "question": "What is the greedy best-first search algorithm?",
+    "answer": "An informed search algorithm that expands the node with the lowest heuristic value H(n), always moving toward the estimated goal direction.",
+    "confidence": 0
+  },
+  {
+    "id": 13,
+    "question": "What are the advantages and drawbacks of greedy best-first search?",
+    "answer": "It can reach the goal quickly but often produces non-optimal solutions since it does not consider the cost to reach the node.",
+    "confidence": 0
+  },
+  {
+    "id": 14,
+    "question": "What function does A* search use to evaluate nodes?",
+    "answer": "A* uses F(n) = G(n) + H(n), combining the actual cost from the start (G) and the heuristic estimate to the goal (H).",
+    "confidence": 0
+  },
+  {
+    "id": 15,
+    "question": "Under what conditions is A* search guaranteed to find the optimal solution?",
+    "answer": "When the heuristic is admissible (never overestimates cost) and consistent (satisfies the triangle inequality).",
+    "confidence": 0
+  },
+  {
+    "id": 16,
+    "question": "What is bidirectional heuristic search?",
+    "answer": "A search that runs simultaneously from the start and goal states until the two searches meet, often reducing search time.",
+    "confidence": 0
+  },
+  {
+    "id": 17,
+    "question": "In A*, what do the terms G(n) and H(n) represent?",
+    "answer": "G(n) is the actual path cost from the start node to n, and H(n) is the estimated cost from n to the goal.",
+    "confidence": 0
+  },
+  {
+    "id": 18,
+    "question": "What is the purpose of using heuristics in informed search algorithms?",
+    "answer": "To guide the search toward the goal more efficiently by estimating which states are closer to the target.",
+    "confidence": 0
+  },
+  {
+    "id": 19,
+    "question": "What is local search in AI?",
+    "answer": "A search that starts from an initial state and moves to neighboring states without keeping track of the full path, focusing only on the current configuration.",
+    "confidence": 0
+  },
+  {
+    "id": 20,
+    "question": "What is an optimization problem?",
+    "answer": "A problem where the goal is to find the best state according to an objective or cost function, such as maximizing efficiency or minimizing cost.",
+    "confidence": 0
+  },
+  {
+    "id": 21,
+    "question": "What is the difference between a global maximum and a local maximum in optimization?",
+    "answer": "A global maximum is the highest value across all states, while a local maximum is the highest value within a limited neighborhood of states.",
+    "confidence": 0
+  },
+  {
+    "id": 22,
+    "question": "What is the hill climbing algorithm?",
+    "answer": "A local search algorithm that iteratively moves to the neighboring state with the highest objective value until a peak is reached.",
+    "confidence": 0
+  },
+  {
+    "id": 23,
+    "question": "What are the main weaknesses of hill climbing?",
+    "answer": "It can get stuck at local maxima, plateaus, or shoulders because it only moves uphill and never accepts worse states.",
+    "confidence": 0
+  },
+  {
+    "id": 24,
+    "question": "How does random-restart hill climbing improve success rates?",
+    "answer": "By restarting the algorithm from random initial states after getting stuck, increasing the chance of finding the global optimum.",
+    "confidence": 0
+  },
+  {
+    "id": 25,
+    "question": "What is simulated annealing?",
+    "answer": "An optimization algorithm inspired by the physical annealing process that accepts some worse moves with a probability based on a decreasing 'temperature' value.",
+    "confidence": 0
+  },
+  {
+    "id": 26,
+    "question": "How does simulated annealing avoid getting trapped in local minima?",
+    "answer": "By introducing controlled randomness that occasionally allows downhill moves, helping escape local minima and continue exploring.",
+    "confidence": 0
+  },
+  {
+    "id": 27,
+    "question": "What is the role of temperature in simulated annealing?",
+    "answer": "It controls the probability of accepting worse solutions, starting high to allow exploration and gradually decreasing to refine results.",
+    "confidence": 0
+  },
+  {
+    "id": 28,
+    "question": "What is the success rate of standard hill climbing on the eight queens problem?",
+    "answer": "Around 14% without modifications, but up to 94% if the algorithm continues on plateaus (shoulders).",
+    "confidence": 0
+  },
+  {
+    "id": 29,
+    "question": "What is the key idea behind combining random walks with hill climbing?",
+    "answer": "To balance exploration and exploitation, allowing occasional random moves that help avoid local optima while mostly climbing uphill.",
+    "confidence": 0
+  },
+  {
+    "id": 30,
+    "question": "How does simulated annealing compare to hill climbing?",
+    "answer": "Simulated annealing performs better in practice because it allows occasional bad moves, preventing early termination at local optima.",
+    "confidence": 0
+  },
+  {
+    "id": 31,
+    "question": "What distinguishes complex (or local) search problems from traditional path‑finding problems?",
+    "answer": "In complex or local search problems there is no notion of a path; the goal is simply to find any state that satisfies the goal conditions. The algorithm cares only about the final layout, not how it was reached.",
+    "confidence": 0
+  },
+  {
+    "id": 32,
+    "question": "Give an example of a complex search problem discussed in the video.",
+    "answer": "The eight‑queen problem – placing eight queens on a chessboard so that none attack each other. The algorithm only cares about the final board configuration, not the sequence of moves that produced it.",
+    "confidence": 0
+  },
+  {
+    "id": 33,
+    "question": "What is local search in the context of complex problems?",
+    "answer": "Local search starts from an initial state and repeatedly moves to a neighboring state without keeping track of the path or previously visited states. It only retains information about its current position.",
+    "confidence": 0
+  },
+  {
+    "id": 34,
+    "question": "Define an optimization problem in AI search terms.",
+    "answer": "An optimization problem seeks the best state according to some objective function, i.e., the state that maximizes (or minimizes) a given numeric value.",
+    "confidence": 0
+  },
+  {
+    "id": 35,
+    "question": "What is a global maximum in an optimization problem?",
+    "answer": "A global maximum is the state with the highest objective value among all states in the entire search space.",
+    "confidence": 0
+  },
+  {
+    "id": 36,
+    "question": "Explain hill climbing and its main limitation.",
+    "answer": "Hill climbing moves from a state to the neighboring state with the highest objective value, always going uphill. It can get stuck at local maxima or plateaus because it never accepts downhill moves, so it is not guaranteed to find the global optimum.",
+    "confidence": 0
+  },
+  {
+    "id": 37,
+    "question": "What improvement does random‑restarting hill climbing add?",
+    "answer": "When hill climbing fails (gets stuck), it restarts from a new random initial state. Repeating this often leads to finding a solution more reliably.",
+    "confidence": 0
+  },
+  {
+    "id": 38,
+    "question": "Describe simulated annealing’s key idea for escaping local minima.",
+    "answer": "Simulated annealing occasionally accepts moves that increase the cost (bad moves) with a probability that decreases over time. This controlled randomness helps the search escape local minima and eventually converge to a global optimum.",
+    "confidence": 0
+  },
+  {
+    "id": 39,
+    "question": "What is breadth‑first search (BFS) and when is it optimal?",
+    "answer": "Breadth‑first search expands nodes level by level. It is optimal (finds the shortest path in terms of number of steps) if all step costs are equal.",
+    "confidence": 0
+  },
+  {
+    "id": 40,
+    "question": "Why can BFS be problematic for large state spaces?",
+    "answer": "BFS requires storing all nodes on a frontier level, leading to exponential growth in memory and time as the branching factor and depth increase.",
+    "confidence": 0
+  },
+  {
+    "id": 41,
+    "question": "What is Dijkstra’s algorithm also known as?",
+    "answer": "Uniform‑cost search – it expands nodes with the lowest cumulative path cost, guaranteeing a cost‑optimal solution when all step costs are non‑negative.",
+    "confidence": 0
+  },
+  {
+    "id": 42,
+    "question": "How does depth‑first search (DFS) differ from BFS in terms of memory usage?",
+    "answer": "DFS only keeps track of the current path, so its memory usage is proportional to the depth of the deepest node rather than the breadth of a frontier.",
+    "confidence": 0
+  },
+  {
+    "id": 43,
+    "question": "What problem can DFS face and how is it mitigated?",
+    "answer": "DFS can enter infinite loops in graphs with cycles. This is avoided by detecting revisited nodes or using depth‑limited search.",
+    "confidence": 0
+  },
+  {
+    "id": 44,
+    "question": "Explain iterative deepening depth‑first search (IDDFS).",
+    "answer": "IDDFS repeatedly runs DFS with increasing depth limits (0,1,2,…). It combines the space efficiency of DFS with completeness and optimality in terms of path length (when step costs are equal).",
+    "confidence": 0
+  },
+  {
+    "id": 45,
+    "question": "What is a heuristic function in informed search?",
+    "answer": "A heuristic $h(n)$ estimates the cost from node $n$ to the goal. It guides the search by providing domain knowledge.",
+    "confidence": 0
+  },
+  {
+    "id": 46,
+    "question": "Define admissible and consistent heuristics.",
+    "answer": "An admissible heuristic never overestimates the true cost to reach the goal. A consistent (monotonic) heuristic satisfies $h(n) \le c(n,a,n') + h(n')$ for every action, ensuring triangle inequality holds.",
+    "confidence": 0
+  },
+  {
+    "id": 47,
+    "question": "What is greedy best‑first search?",
+    "answer": "Greedy best‑first search expands the node with the lowest heuristic value $h(n)$, ignoring path cost. It can be fast but is not guaranteed to find an optimal solution.",
+    "confidence": 0
+  },
+  {
+    "id": 48,
+    "question": "How does A* search differ from greedy best‑first search?",
+    "answer": "A* uses $f(n) = g(n) + h(n)$, where $g(n)$ is the exact cost from start to $n$. It balances actual cost and heuristic, guaranteeing optimality if $h$ is admissible (and consistent).",
+    "confidence": 0
+  },
+  {
+    "id": 49,
+    "question": "What role does the temperature play in simulated annealing?",
+    "answer": "Temperature controls the probability of accepting worse moves. High temperatures allow many bad moves; as it cools, the algorithm becomes more selective, eventually behaving like hill climbing.",
+    "confidence": 0
+  },
+  {
+    "id": 50,
+    "question": "Describe bidirectional search in brief.",
+    "answer": "Bidirectional search runs two simultaneous searches: one from the start and one from the goal. When the frontiers meet, a solution is found, often faster than unidirectional search for large spaces.",
+    "confidence": 0
+  },
+  {
+    "id": 51,
+    "question": "What are the two common heuristic functions for the 8‑tile puzzle mentioned?",
+    "answer": "1) Number of misplaced tiles. 2) Sum of Manhattan distances (total number of moves each tile is away from its goal position). The second gives a better estimate.",
+    "confidence": 0
+  },
+  {
+    "id": 52,
+    "question": "Why does simulated annealing need to reduce the temperature over time?",
+    "answer": "Reducing temperature decreases the acceptance probability of worse moves, allowing the search to settle into promising regions and avoid endless random wandering.",
+    "confidence": 0
+  },
+  {
+    "id": 53,
+    "question": "What guarantees that breadth‑first search finds a solution if one exists?",
+    "answer": "BFS is complete when all step costs are equal because it explores nodes in order of increasing depth; therefore, it will eventually reach any reachable goal state.",
+    "confidence": 0
+  },
+  {
+    "id": 54,
+    "question": "Why might A* be more efficient than uniform‑cost search?",
+    "answer": "A* uses heuristic estimates to guide the expansion, often exploring far fewer nodes than uniform‑cost search which expands based solely on actual cost without guidance.",
+    "confidence": 0
+  },
+  {
+    "id": 55,
+    "question": "What is a plateau in hill climbing?",
+    "answer": "A plateau is a region where neighboring states have equal objective values, causing the algorithm to potentially wander without progress until it finds an uphill move or a shoulder.",
+    "confidence": 0
+  }
+]
