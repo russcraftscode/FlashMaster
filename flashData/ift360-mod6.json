@@ -1,0 +1,162 @@
+[
+  { "id": 1, "question": "What are the four components of a task environment?", "answer": "Performance measure, environment, actuators, and sensors.", "confidence": 0 },
+  { "id": 2, "question": "What does a utility function represent for a self-driving car?", "answer": "It combines multiple performance goals into a single measure of desirability.", "confidence": 0 },
+  { "id": 3, "question": "What kinds of factors make up the environment of a self-driving car?", "answer": "Roads, traffic, pedestrians, police, passengers, and weather conditions.", "confidence": 0 },
+  { "id": 4, "question": "What are actuators in a self-driving car?", "answer": "Devices that allow the car to act on the environment, such as steering, accelerator, brakes, and signals.", "confidence": 0 },
+  { "id": 5, "question": "What are sensors in a self-driving car used for?", "answer": "To perceive input such as visuals, speed, GPS, engine status, and ambient sounds.", "confidence": 0 },
+  { "id": 6, "question": "How does a self-driving car move from initial state to destination?", "answer": "It takes actions based on sensor input that transition it between states until reaching the goal.", "confidence": 0 },
+  { "id": 7, "question": "What is a finite state machine (FSM) in the context of self-driving cars?", "answer": "A model where the car occupies predefined states and transitions between them based on sensor input.", "confidence": 0 },
+  { "id": 8, "question": "Why do finite state machines become impractical for self-driving cars?", "answer": "Because many sensors with many possible values lead to an exponential explosion in states and transitions.", "confidence": 0 },
+  { "id": 9, "question": "What is supervised learning used for in self-driving systems?", "answer": "To learn the correct action to take for each combination of sensor inputs using labeled examples.", "confidence": 0 },
+  { "id": 10, "question": "Why does increasing training data improve self-driving performance?", "answer": "More varied examples help models generalize better and produce more accurate action predictions.", "confidence": 0 },
+  { "id": 11, "question": "What is natural language processing (NLP)?", "answer": "An AI field focused on enabling computers to understand and process human language.", "confidence": 0 },
+  { "id": 12, "question": "Why is processing natural language important for computers?", "answer": "It allows easier communication with humans and enables systems to extract knowledge from text.", "confidence": 0 },
+  { "id": 13, "question": "What is a natural language?", "answer": "A human language such as English, Spanish, or French.", "confidence": 0 },
+  { "id": 14, "question": "What is a formal language?", "answer": "A structured language used by computers, such as programming languages or logical languages.", "confidence": 0 },
+  { "id": 15, "question": "How does NLP help search engines?", "answer": "By classifying and indexing documents for efficient retrieval.", "confidence": 0 },
+  { "id": 16, "question": "What does auto-translation require an NLP system to do?", "answer": "Understand the meaning and structure of a sentence and map it to another language.", "confidence": 0 },
+  { "id": 17, "question": "Why do grammar and spelling correction systems need a language model?", "answer": "To determine which words or structures are likely to occur next in a sentence.", "confidence": 0 },
+  { "id": 18, "question": "What is a bag-of-words model?", "answer": "A model that represents a document as the set or counts of words it contains, ignoring order.", "confidence": 0 },
+  { "id": 19, "question": "What is one limitation of the bag-of-words model?", "answer": "Common words can appear across unrelated topics and provide little distinction.", "confidence": 0 },
+  { "id": 20, "question": "What is an n-gram?", "answer": "A sequence of n consecutive words used to model language patterns.", "answer": "A sequence of n consecutive words that captures local word order and context.", "confidence": 0 },
+  { "id": 21, "question": "Why are n-grams more informative than individual words?", "answer": "Phrases are often specific to particular topics, making classification more accurate.", "confidence": 0 },
+  { "id": 22, "question": "How can n-grams be used to detect valid English phrases?", "answer": "By checking how often a phrase appears in training data—more appearances indicate greater likelihood of correctness.", "confidence": 0 },
+  { "id": 23, "question": "What does the phrase 'a black cat' demonstrate in n-gram models?", "answer": "A valid phrase that appears frequently across training examples.", "confidence": 0 },
+  { "id": 24, "question": "What does the phrase 'black cat a' demonstrate in n-gram models?", "answer": "An invalid phrase that appears zero times in training examples.", "confidence": 0 },
+  { "id": 25, "question": "What is part-of-speech (POS) tagging?", "answer": "Assigning each word a grammatical category such as noun, adjective, or verb.", "confidence": 0 },
+  { "id": 26, "question": "Why is POS tagging useful in NLP?", "answer": "It helps identify sentence patterns and determine whether they are grammatically valid.", "confidence": 0 },
+  { "id": 27, "question": "What is an example of a valid English pattern used in POS analysis?", "answer": "Article + adjective + noun.", "confidence": 0 },
+  { "id": 28, "question": "Why can humans easily identify 'a black cat' as valid English?", "answer": "It follows a familiar part-of-speech pattern repeated across many sentences.", "confidence": 0 },
+  { "id": 29, "question": "How does POS tagging assist in automatic translation?", "answer": "By identifying parts of speech so word order can be rearranged to fit the target language's patterns.", "confidence": 0 },
+  { "id": 30, "question": "What is an example of word-order difference revealed by POS tagging?", "answer": "English uses adjective–noun order; Spanish and Arabic use noun–adjective.", "confidence": 0 },
+  { "id": 31, "question": "What does supervised learning require for use in NLP tasks like document classification?", "answer": "A labeled dataset with documents and their category labels.", "confidence": 0 },
+  { "id": 32, "question": "Why is a taxonomy useful for document classification?", "answer": "It organizes categories and subcategories in a structured hierarchy.", "confidence": 0 },
+  { "id": 33, "question": "How does increasing dataset size affect NLP language models?", "answer": "It improves accuracy by providing more examples of language usage.", "confidence": 0 },
+  { "id": 34, "question": "In POS tagging, what does the tag 'CC' represent?", "answer": "Coordinating conjunction.", "confidence": 0 },
+  { "id": 35, "question": "In POS tagging, what does 'DT' represent?", "answer": "Determiner.", "confidence": 0 },
+  { "id": 36, "question": "What does the POS tag 'JJR' indicate?", "answer": "A comparative adjective.", "confidence": 0 },
+  { "id": 37, "question": "What does the POS tag 'NNS' indicate?", "answer": "A plural noun.", "confidence": 0 },
+  { "id": 38, "question": "Why can't we rely solely on n-grams for grammar correction?", "answer": "A phrase may be rare or absent in the dataset despite being grammatically valid, requiring more general rules like POS patterns.", "confidence": 0 },
+  { "id": 39, "question": "Why do self-driving systems prefer deep learning over FSMs?", "answer": "Deep learning handles high-dimensional sensor data without requiring manual enumeration of states or transitions.", "confidence": 0 },
+  { "id": 40, "question": "What is the key reason NLP models are continually improving?", "answer": "Growing understanding of human language and expanding datasets enable more sophisticated modeling.", "confidence": 0 },
+  {
+    "id": 41,
+    "question": "Why do NLP systems help advance scientific understanding of human language?",
+    "answer": "Because building models that process language reveals patterns in how humans structure and use natural language.",
+    "confidence": 0
+  },
+  {
+    "id": 42,
+    "question": "What is a taxonomy in the context of document classification?",
+    "answer": "A hierarchical structure that organizes categories and subcategories of documents for more accurate indexing.",
+    "confidence": 0
+  },
+  {
+    "id": 43,
+    "question": "In a bag-of-words dataset, what do the rows and columns represent?",
+    "answer": "Rows represent documents and columns represent words appearing across the corpus.",
+    "confidence": 0
+  },
+  {
+    "id": 44,
+    "question": "In an n-gram dataset, what do the features represent?",
+    "answer": "Each feature represents an n-gram—an n-word sequence that appears in the corpus.",
+    "confidence": 0
+  },
+  {
+    "id": 45,
+    "question": "How do n-gram models contribute to predicting the next word in a sentence?",
+    "answer": "They estimate the likelihood of a word sequence based on the frequency of similar sequences in training data.",
+    "confidence": 0
+  },
+  {
+    "id": 46,
+    "question": "Why does POS tagging generalize better than n-grams for unseen sentences?",
+    "answer": "Because it evaluates grammatical structure rather than relying on exact phrase frequency in the dataset.",
+    "confidence": 0
+  },
+  {
+    "id": 47,
+    "question": "What is a knowledge base of sentence patterns used for in NLP?",
+    "answer": "It stores valid part-of-speech patterns that help evaluate whether a sentence is grammatically correct.",
+    "confidence": 0
+  },
+  {
+    "id": 48,
+    "question": "Why can POS tagging validate correct sentences even if they never appear in the dataset?",
+    "answer": "Because it checks whether they follow known grammatical patterns instead of relying on memorized examples.",
+    "confidence": 0
+  },
+  {
+    "id": 49,
+    "question": "What role does POS tagging play in grammatical error detection?",
+    "answer": "It identifies whether a sequence of parts of speech matches a known valid sentence structure.",
+    "confidence": 0
+  },
+  {
+    "id": 50,
+    "question": "How does POS tagging assist in auto-translation across languages?",
+    "answer": "It identifies the grammatical roles of words so their order can be rearranged to fit patterns in the target language.",
+    "confidence": 0
+  },
+  {
+    "id": 51,
+    "question": "What is an example of a structural difference that translation systems must account for?",
+    "answer": "English uses adjective-noun order, while languages like Spanish or Arabic use noun-adjective.",
+    "confidence": 0
+  },
+  {
+    "id": 52,
+    "question": "Why does the lecture highlight that a dataset may contain 'a black cat' but not 'a black kitten'?",
+    "answer": "To show that n-gram frequency alone cannot validate grammar and POS patterns are needed for generalization.",
+    "confidence": 0
+  },
+  {
+    "id": 53,
+    "question": "How does an NLP system use POS tags to evaluate sentence correctness?",
+    "answer": "It maps each word to its POS tag and checks if the resulting sequence matches any pattern in the knowledge base.",
+    "confidence": 0
+  },
+  {
+    "id": 54,
+    "question": "Why do n-gram models struggle with rare but correct English phrases?",
+    "answer": "Because phrases that appear zero times in training data may still be grammatically valid.",
+    "confidence": 0
+  },
+  {
+    "id": 55,
+    "question": "Why do NLP systems maintain detailed POS tags such as JJS, EX, or FW?",
+    "answer": "Fine-grained tags allow the system to build precise grammatical patterns needed for grammar checking and translation.",
+    "confidence": 0
+  },
+  {
+    "id": 56,
+    "question": "What limitation of n-gram models motivates the need for POS tagging?",
+    "answer": "N-grams capture local word sequences but cannot assess grammatical structure or sentence-level validity.",
+    "confidence": 0
+  },
+  {
+    "id": 57,
+    "question": "How can POS tagging help correct word order errors?",
+    "answer": "By detecting when a sequence of parts of speech violates known valid language patterns.",
+    "confidence": 0
+  },
+  {
+    "id": 58,
+    "question": "Why is phrase order an important concept in NLP translation tasks?",
+    "answer": "Different languages place adjectives, nouns, and other parts of speech in different positions, requiring reordering.",
+    "confidence": 0
+  },
+  {
+    "id": 59,
+    "question": "What does the lecture suggest about the limits of using only example-based learning in NLP?",
+    "answer": "Systems must generalize to phrases not present in the dataset, requiring structural linguistic rules.",
+    "confidence": 0
+  },
+  {
+    "id": 60,
+    "question": "What major advantage does POS pattern analysis provide over raw text frequency analysis?",
+    "answer": "POS patterns capture grammar and structure, allowing sentence validity assessment independent of dataset coverage.",
+    "confidence": 0
+  }
+]
